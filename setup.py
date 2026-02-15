@@ -28,6 +28,8 @@ setup (
     name="dundie",
     version="0.1.0",
     description="Reward Point System for Dunder Mifflin",
+    long_description=read("README.md"),
+    long_description_content_type="text/markdown",
     author="Raquel Marques",
     packages=find_packages(),
     entry_points={
