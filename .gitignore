@@ -6,3 +6,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*.egg-info/
+__pycache__/
+build/
