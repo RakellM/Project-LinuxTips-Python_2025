@@ -11,5 +11,16 @@ setup (
         "console_scripts": [
             "dundie= dundie.__main__:main"
         ]
+    },
+    install_requires=[],
+    extras_require={
+        "test": [
+            "pytest"
+        ],
+        "dev": [
+            "ipdb",
+            "ipython",
+            "pudb"
+        ]
     }
 )
