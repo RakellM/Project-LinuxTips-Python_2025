@@ -11,3 +11,19 @@ We agreed in the contract that the MVP (Minimum Viable Product) will be a termin
 Data for current employees will be provided in a file, which can be in .csv or .json format, and this same file can be used for future versions. `Name`, `Department`, `Position`, `Email`.
 
 
+## Installation
+
+```py
+pip install yourname-dundie
+```
+
+```py
+pip install -e .[dev]
+```
+
+## Usage
+
+```py
+dundie load assets/people.csv
+```
+
