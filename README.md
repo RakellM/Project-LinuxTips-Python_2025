@@ -1,5 +1,7 @@
 # Project Dundie Rewards 🏆
 
+[![CI](https://github.com/RakellM/Project-LinuxTips-Python_2025/actions/workflows/main.yml/badge.svg)](https://github.com/RakellM/Project-LinuxTips-Python_2025/actions/workflows/main.yml)
+
 We have been hired by _Dunder Mifflin_, a major paper manufacturer, to develop a reward system for their employees.
 
 Michael, the company's manager, wants to increase employee motivation by offering a points system. Employees can accumulate points based on achieved goals, bonuses offered by the manager, and they can also exchange points with each other.
