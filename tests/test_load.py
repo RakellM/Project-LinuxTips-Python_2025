@@ -1,3 +1,4 @@
+import os
 import uuid
 import pytest
 from dundie.core import load
@@ -38,10 +39,12 @@ def test_load(request):
 
 @pytest.mark.unit
 @pytest.mark.high
-def test_load2():
+def test_load2(request):
     """Test function load function."""
+    filepath = f"unwanted_file-{uuid.uuid4()}.txt"
+    request.addfinalizer(lambda: os.unlink(filepath))
 
-    with open (f"unwanted_file-{uuid.uuid4()}.txt", "w") as file_:
+    with open (filepath, "w") as file_:
         file_.write("useful data only for test!")
 
     assert len(load(PEOPLE_FILE)) == 2
