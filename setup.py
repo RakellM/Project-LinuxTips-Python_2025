@@ -11,7 +11,7 @@ def read(*paths):
     """
     rootpath = os.path.dirname(__file__)
     filepath = os.path.join(rootpath, *paths)
-    with open(filepath) as file_:
+    with open(filepath, encoding='utf-8') as file_:
         return file_.read().strip()
   
 
