@@ -1,4 +1,4 @@
-.PHONY: install virtualenv ipython clean test
+.PHONY: install virtualenv ipython clean test watch
 
 install:
 	@echo "Installing for dev environment"
@@ -8,17 +8,25 @@ install:
 
 # install in the right environment without it being activated. check what is the path for windows! 
 # 	@.venv/bin/python -m pip install -e .[dev] 
+# 	.venv/Scripts/python -m pip install -e .[dev] 
 
 
 virtualenv:
-	@.venv/bin/python -m pip -m venv .venv
+# 	@.venv/bin/python -m pip -m venv .venv
+	.venv/Scripts/python -m pip -m venv .venv
 
 
 ipython:
-	@.venv/bin/ipython
+# 	@.venv/bin/ipython
+	.venv/Scripts/ipython
 
 test:
-	@.venv/bin/pytest -vv -s tests/
+# 	@.venv/bin/pytest -vv -s tests/
+	.venv/Scripts/pytest -vv -s tests/
+
+watch:
+# 	@.venv/bin/ptw -- -vv -s tests/
+	@.venv/Scripts/ptw -- -vv -s tests/
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;

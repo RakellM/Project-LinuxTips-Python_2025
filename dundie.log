@@ -1,0 +1,1 @@
+2026-02-16 16:05:01,387  dundie  ERROR l:19 f:core.py: [Errno 2] No such file or directory: 'test/assets/people.csv'

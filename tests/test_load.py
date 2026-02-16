@@ -1,7 +1,11 @@
+import pytest
 from dundie.core import load
+from .constants import PEOPLE_FILE
 
 
+@pytest.mark.unit
+@pytest.mark.high
 def test_load():
-    """Test load fucntion."""
-    assert len(load("tests/assets/people.csv")) == 2
-    assert load("tests/assets/people.csv")[0][0] == 'J'
+    """Test load function."""
+    assert len(load(PEOPLE_FILE)) == 2
+    assert load(PEOPLE_FILE)[0][0] == 'J'
