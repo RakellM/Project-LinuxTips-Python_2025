@@ -10,3 +10,8 @@ venv.bak/
 __pycache__/
 build/
 # assets/
+
+# Ignore Logs
+*.log
+*.log.*
+
