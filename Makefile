@@ -25,7 +25,7 @@ test:
 # 	.venv/Scripts/pytest -vv -s tests/
 
 testci:
-	@pytest -v --junitxml=test-result.xml
+	@.venv/bin/pytest -v --junitxml=test-result.xml
 
 watch:
 	@.venv/bin/ptw -- -vv -s tests/
