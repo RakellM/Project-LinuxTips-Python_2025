@@ -31,6 +31,7 @@ lint:
 
 fmt:
 	@.venv/bin/black dundie tests integration
+# 	python -m black dundie tests integration
 
 test:
 	@.venv/bin/pytest -vv -s tests/

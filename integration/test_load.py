@@ -6,9 +6,11 @@ from subprocess import check_output, CalledProcessError
 @pytest.mark.medium
 def test_load_positive_call_load_command():
     """Test comand load."""
-    out = check_output(
-        ["dundie", "load", "tests/assets/people.csv"]
-    ).decode("utf-8").split("\n")
+    out = (
+        check_output(["dundie", "load", "tests/assets/people.csv"])
+        .decode("utf-8")
+        .split("\n")
+    )
     assert len(out) == 2
 
 
@@ -21,6 +23,5 @@ def test_load_negative_call_load_command_with_wrong_params(wrong_command):
         check_output(
             ["dundie", wrong_command, "tests/assets/people.csv"]
         ).decode("utf-8").split("\n")
-    
-    assert "status 2" in str(error.getrepr())
 
+    assert "status 2" in str(error.getrepr())
