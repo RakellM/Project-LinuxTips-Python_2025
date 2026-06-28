@@ -29,6 +29,9 @@ lint:
 # 	.venv/Scripts/pflake8
 # 	python -m pflake8 .
 
+fmt:
+	@.venv/bin/black dundie tests integration
+
 test:
 	@.venv/bin/pytest -vv -s tests/
 # 	@.venv/Scripts/pytest -vv -s tests/
