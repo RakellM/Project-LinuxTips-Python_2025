@@ -13,7 +13,7 @@ def read(*paths):
     filepath = os.path.join(rootpath, *paths)
     with open(filepath, encoding='utf-8') as file_:
         return file_.read().strip()
-  
+
 
 def read_requirements(path):
     """Return a list of requirements from a text file."""
@@ -24,7 +24,7 @@ def read_requirements(path):
     ]
 
 
-setup (
+setup(
     name="dundie",
     version="0.1.0",
     description="Reward Point System for Dunder Mifflin",
