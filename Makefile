@@ -30,8 +30,11 @@ lint:
 # 	python -m pflake8 .
 
 fmt:
-	@.venv/bin/black dundie tests integration
-# 	python -m black dundie tests integration
+# 	@.venv/bin/isort dundie tests integration
+	python -m isort dundie tests integration
+
+# 	@.venv/bin/black dundie tests integration
+	python -m black dundie tests integration
 
 test:
 	@.venv/bin/pytest -vv -s tests/
