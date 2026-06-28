@@ -1,5 +1,6 @@
 import argparse
-from dundie.core  import load
+
+from dundie.core import load  # noqa
 
 
 def main():
@@ -8,17 +9,17 @@ def main():
         epilog="Enjoy and use with caution.",
     )
     parser.add_argument(
-          "subcommand",
-          type=str,
-          help="The subcommand to run",
-          choices=("load", "show", "send"),
-          default="help",
+        "subcommand",
+        type=str,
+        help="The subcommand to run",
+        choices=("load", "show", "send"),
+        default="help",
     )
     parser.add_argument(
-          "filepath",
-          type=str,
-          help="File path to load",
-          default=None,
+        "filepath",
+        type=str,
+        help="File path to load",
+        default=None,
     )
     args = parser.parse_args()
 
