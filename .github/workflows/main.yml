@@ -20,7 +20,7 @@ permissions:
 jobs:
   lint:
     strategy:
-      fail-test: true
+      fail-fast: true  # Stops all jobs if one fails
       matrix:
         python-version: ['3.12']
         os: [ubuntu-latest]
